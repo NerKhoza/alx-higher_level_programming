@@ -8,8 +8,6 @@ if __name__ == "__main__":
 
     if lenarg == 1:
         print("{} arguments.".format(lenarg - 1))
-    elif lenarg == 2:
-        print("{} argument:".format(lenarg - 1))
     else:
         print("{} arguments:".format(lenarg - 1))
 
