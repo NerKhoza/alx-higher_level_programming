@@ -1,4 +1,6 @@
 #!/usr/bin/python3
-"""Defines a class checking function."""
+"""Defines a class BaseGeometry."""
+
 class BaseGeometry:
+    """Represent Base Geometry"""
     pass
