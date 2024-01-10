@@ -3,6 +3,7 @@
 
 
 class MyInt(int):
+    """Write a class MyInt that inherits from int"""
     def __eq__(self, other):
         # Invert the behavior of ==
         return not super().__eq__(other)
