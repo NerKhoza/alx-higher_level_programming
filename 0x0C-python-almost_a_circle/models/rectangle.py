@@ -1,18 +1,15 @@
 #!/usr/bin/python3
 
-
 from models.base import Base
 
+
 class Rectangle(Base):
-
-
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-
 
     @property
     def width(self):
@@ -26,7 +23,6 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
-
     @property
     def height(self):
         return self.__height
@@ -39,7 +35,6 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
-
     @property
     def x(self):
         return self.__x
@@ -51,7 +46,6 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("X must be >= 0")
         self.__x = value
-
 
     @property
     def y(self):
@@ -73,3 +67,6 @@ class Rectangle(Base):
             for j in range(self.width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
