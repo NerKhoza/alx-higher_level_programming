@@ -7,6 +7,12 @@ class Rectangle:
     """It represents a rectangle"""
 
     def __init__(self, height=0, width=0):
+        """It initialises height and width
+
+        args:
+            height - height of the rectangle
+            width - width of rectangle
+        """
         self.height = height
         self.width = width
 
