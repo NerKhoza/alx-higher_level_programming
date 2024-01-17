@@ -3,6 +3,6 @@
 """Defines a list"""
 
 
-def copy_list(l):
+def copy_list(L):
     """Represents a list"""
-    return list(l)
+    return list(L)
