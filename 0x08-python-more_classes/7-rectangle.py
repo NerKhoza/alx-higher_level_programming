@@ -3,12 +3,21 @@
 
 
 class Rectangle:
-    """ Public class attributes"""
+    """ Public class attributes
+
+        number_of_instances - number of rectangle instances
+        print_symbol - symbol used for strng represebtation
+    """
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-        """ Private instance attributes"""
+        """ Private instance attributes
+
+        args:
+            width - width of a rectanle
+            height - height of a rectanlge
+        """
         self.__width = 0
         self.__height = 0
 
