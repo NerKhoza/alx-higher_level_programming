@@ -13,11 +13,9 @@ class Rectangle:
         self.__width = 0
         self.__height = 0
 
-        """ Set width and height using properties"""
         self.width = width
         self.height = height
 
-        """ Increment number_of_instances"""
         Rectangle.number_of_instances += 1
 
     @property
