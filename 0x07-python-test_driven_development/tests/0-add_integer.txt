@@ -1,37 +1,27 @@
-import unittest
-import 0-add_integer
-
-class TestAddIntegerFunction(unittest.TestCase):
-
-    def test_add_integers(self):
-        # Test case where both a and b are integers
-        result = add_integer(5, 3)
-        self.assertEqual(result, 8)
-
-    def test_add_float_and_integer(self):
-        # Test case where a is a float and b is an integer
-        result = add_integer(2.5, 10)
-        self.assertEqual(result, 12)
-
-    def test_add_integer_and_default_value(self):
-        # Test case where only a is provided, and b takes the default value
-        result = add_integer(7)
-        self.assertEqual(result, 105)
-
-    def test_add_float_values(self):
-        # Test case where both a and b are floats
-        result = add_integer(3.14, 2.5)
-        self.assertEqual(result, 5)
-
-    def test_invalid_input_a(self):
-        # Test case where a is a string (invalid input)
-        with self.assertRaises(TypeError):
-            add_integer("hello", 5)
-
-    def test_invalid_input_b(self):
-        # Test case where b is a string (invalid input)
-        with self.assertRaises(TypeError):
-            add_integer(10, "world")
-
-if __name__ == '__main__':
-    unittest.main()
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2, 3)
+5
+>>> add_integer(2, -3)
+-1
+>>> add_integer(2.0, 3.0)
+5
+>>> add_integer(2.9, 0.2)
+2
+>>> add_integer(-2.9, -0.2)
+-2
+>>> add_integer(2.3, -3)
+-1
+>>> add_integer(2)
+100
+>>> add_integer("hello", 3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 16, in add_integer
+    raise TypeError("a must be an integer ")
+TypeError: a must be an integer 
+>>> add_integer(2, "hello")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/0-add_integer.py", line 19, in add_integer
+    raise TypeError("a must be an integer ")
+TypeError: a must be an integer 
