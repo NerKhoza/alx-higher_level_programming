@@ -1,0 +1,37 @@
+import unittest
+import 0-add_integer
+
+class TestAddIntegerFunction(unittest.TestCase):
+
+    def test_add_integers(self):
+        # Test case where both a and b are integers
+        result = add_integer(5, 3)
+        self.assertEqual(result, 8)
+
+    def test_add_float_and_integer(self):
+        # Test case where a is a float and b is an integer
+        result = add_integer(2.5, 10)
+        self.assertEqual(result, 12)
+
+    def test_add_integer_and_default_value(self):
+        # Test case where only a is provided, and b takes the default value
+        result = add_integer(7)
+        self.assertEqual(result, 105)
+
+    def test_add_float_values(self):
+        # Test case where both a and b are floats
+        result = add_integer(3.14, 2.5)
+        self.assertEqual(result, 5)
+
+    def test_invalid_input_a(self):
+        # Test case where a is a string (invalid input)
+        with self.assertRaises(TypeError):
+            add_integer("hello", 5)
+
+    def test_invalid_input_b(self):
+        # Test case where b is a string (invalid input)
+        with self.assertRaises(TypeError):
+            add_integer(10, "world")
+
+if __name__ == '__main__':
+    unittest.main()
