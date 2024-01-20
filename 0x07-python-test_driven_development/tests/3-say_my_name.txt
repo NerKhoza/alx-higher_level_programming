@@ -1,0 +1,11 @@
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+>>> say_my_name("John", "Doe")
+My name is John Doe
+>>> say_my_name("Alice")
+My name is Alice 
+>>> say_my_name(123, "Smith")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 11, in say_my_name
+    raise TypeError("first_name must be a string and last_name must be a string")
+TypeError: first_name must be a string and last_name must be a string
