@@ -4,10 +4,18 @@
 import requests
 import sys
 
-def get_x_request_id(url):
-    response = requests.get(url)
-    x_request_id = response.headers.get('X-Request-Id')
-    return x_request_id
+
+def get_request_id(url):
+    try:
+        response = requests.get(url)
+        request_id = response.headers.get('X-Request-Id')
+        if request_id:
+            return request_id
+        else:
+            return "X-Request-Id header not found in the response"
+    except requests.RequestException as e:
+        return f"Error making request: {e}"
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -15,5 +23,5 @@ if __name__ == "__main__":
         sys.exit(1)
 
     url = sys.argv[1]
-    x_request_id = get_x_request_id(url)
-    print(x_request_id)
+    request_id = get_request_id(url)
+    print(request_id)
