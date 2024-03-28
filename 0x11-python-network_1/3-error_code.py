@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#  Python script that takes in a URL
+"Python script that takes in a URL"
 
 
 import urllib.request
@@ -8,7 +8,7 @@ import sys
 
 
 def fetch_url(url):
-
+"function definition"
 
     try:
         with urllib.request.urlopen(url) as response:
