@@ -7,6 +7,7 @@ import sys
 
 
 def main():
+    "function defination"
     if len(sys.argv) != 3:
         print("Usage: ./script.py <URL> <email>")
         return
