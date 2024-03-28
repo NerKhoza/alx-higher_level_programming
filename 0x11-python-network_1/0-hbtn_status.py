@@ -13,4 +13,3 @@ print("Body response:")
 print("\t- type:", type(body_response))
 print("\t- content:", body_response)
 print("\t- utf8 content:", utf8_content)
-
