@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#  Python script that takes in a URL and an email
+"Python script that takes in a URL and an email"
 
 
 import urllib.parse
