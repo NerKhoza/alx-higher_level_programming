@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-
+"defines a function"
 
 import requests
 import sys
 
 
 def get_url_content(url):
+    "function definition"
     try:
         response = requests.get(url)
         if response.status_code >= 400:
